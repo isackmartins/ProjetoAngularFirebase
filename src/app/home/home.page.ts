@@ -20,8 +20,5 @@ export class HomePage {
     public crudService: CrudService
    ){ }
 
-  enviar(){
-    this.crudService.insert(this.pokemon, 'pokemons');
-  }
 
 }
