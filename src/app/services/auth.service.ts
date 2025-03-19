@@ -88,7 +88,7 @@ export class AuthenticateService {
         if (_.code == 'auth/missing-email') this.message = 'E-mail não informado.';
         if (!!!email) this.message = 'Preencha o e-mail.';
         if (!!!password) this.message = 'Preencha a senha com 6 caracteres.';
-        this._message.show(this.message, this.duration);
+        this._message.show(this.message, );
     }
 
 }

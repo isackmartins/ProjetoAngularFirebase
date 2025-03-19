@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../services/message.service';
+import { CrudService } from '../services/crud.service';
 
 @Component({
   selector: 'app-login',
@@ -12,17 +14,21 @@ export class LoginPage implements OnInit {
       password: null,
       confirm_password: null,
     }
-  constructor() { }
+  constructor(
+    private messageService:MessageService,
+    private crudService:CrudService
+  ) { 
+  }
 
   ngOnInit() {
   }
 
 
   criar(){
-    if(this.user.password != this.user.confirm.confirm_password){
-      
+    if(this.user.password != this.user.confirm_password){
+      this.messageService.show(`as senha nao bati`, 3000)
       return;
     }
-      
+      this.crudService.insert(this.user,'user')
   }
 }
