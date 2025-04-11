@@ -1,0 +1,46 @@
+ion-content{
+    color: #fff;
+}
+
+ion-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 0 0;
+}
+
+
+.botao{
+    padding: 0 2% 0 0;
+    border-radius: 25px;
+}
+
+ion-card{
+    padding: 2%;
+    border-radius: 20px;
+}
+
+ion-row{
+    display: flex;
+    justify-content: center;
+}
+
+.programmer{
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.cards{
+    margin: 2%;
+}
+
+img{
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: #fff ridge;
+}
