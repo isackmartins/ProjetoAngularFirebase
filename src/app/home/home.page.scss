@@ -1,10 +1,11 @@
 ion-content{
     color: #fff;
+    background-color: yellow;
 }
 
 ion-header{
-    display: flex;
-    justify-content: space-between;
+    
+    text-align: center;
     padding: 2% 0 0 0;
 }
 
@@ -17,11 +18,17 @@ ion-header{
 ion-card{
     padding: 2%;
     border-radius: 20px;
+   
 }
 
 ion-row{
     display: flex;
     justify-content: center;
+}
+
+.cards{
+    padding: 3% 22%;
+    margin: -2%;
 }
 
 .programmer{
@@ -30,9 +37,7 @@ ion-row{
     margin-bottom: 5%;
 }
 
-.cards{
-    margin: 2%;
-}
+
 
 img{
     max-width: 400px;
