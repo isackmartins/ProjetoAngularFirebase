@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { IonicModule } from '@ionic/angular';
+
+import { ClientePageRoutingModule } from './cliente-routing.module';
+
+import { ClientePage } from './cliente.page';
 import { HeaderModule } from '../shared/header/header.module';
-import { FooterModule } from '../shared/footer/footer.module';
 import { CarouselModule } from '../shared/carousel/carousel.module';
-
+import { FooterModule } from '../shared/footer/footer.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    ClientePageRoutingModule,
     HeaderModule,
-    FooterModule,
     CarouselModule,
+    FooterModule,
   ],
-  declarations: [HomePage]
+  declarations: [ClientePage]
 })
-export class HomePageModule {}
+export class ClientePageModule {}
