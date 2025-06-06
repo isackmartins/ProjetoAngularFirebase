@@ -1,0 +1,8 @@
+<div class="container-fluid bg-dark">
+  <div class="row">
+    <div class="col-12 d-flex" *ngFor="let menu of this.side_menu">
+      <ion-icon name="{{ menu.icon }}" class="text-light mx-3"></ion-icon>
+      <p class="text-light">{{ menu.name }}</p>
+    </div>
+  </div>
+</div>
