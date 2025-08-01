@@ -12,13 +12,16 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  pokemon: any = {
-    nome: null,
-    poder: null,
-  };
-  constructor(
-    public crudService: CrudService
-   ){ }
-
-
+ proprietarios: any =[];
+ 
+ getProprietarios(){
+  fetch('http://127.0.0.1:8000/api/proprietario')
+  .then(resp => resp.json())
+  .then(
+    resp => {
+      console.log(resp);
+      this.proprietarios = resp;
+    }
+  )
+ }
 }

@@ -1,3 +1,19 @@
 <ion-content [fullscreen]="true">
-    
+    <ion-button color="secondary" (click)="this.getProprietarios()">Teste</ion-button>
+
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="4" *ngFor="let prop of this.proprietarios">
+           <ion-card>
+            <ion-card-header>
+                <ion-card-title>{{ prop.nome }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <h4>data Nasc: {{ prop.ano_nascimento }} </h4>
+                <h4>Profissão: {{ prop.profissao }} </h4>
+                <h4>Tel: {{ prop.telefone }} </h4>
+                <ion-button color="danger">Excluir</ion-button>
+            </ion-card-content>
+           </ion-card>
+        </ion-col>
+    </ion-row>
 </ion-content>
