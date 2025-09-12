@@ -6,6 +6,7 @@ import { MessageService } from '../services/message.service';
 import { Router } from '@angular/router';
 import { ApiService } from '../shared/api.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -23,13 +24,15 @@ export class HomePage {
   message: any;
 
     constructor(
-      public apiservice: ApiService
+      public apiservice: ApiService,
+      private router: Router 
     ){}
 
     registrar(){
       this.apiservice.post('usuario/registrar', this.usuario).subscribe(resp => {
         this.message = resp;
-        console.log(this.message);
+        alert('Usuário registrado com sucesso! Faça login para continuar.');
+        this.router.navigate(['/login']); 
       });
     }
 }
