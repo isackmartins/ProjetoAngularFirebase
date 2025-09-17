@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthenticateService } from '../services/auth.service';
-import { CrudService } from '../services/crud.service';
-import { Storage, getDownloadURL, ref, uploadBytesResumable } from '@angular/fire/storage';
-import { MessageService } from '../services/message.service';
 import { Router } from '@angular/router';
 import { ApiService } from '../shared/api.service';
-
 
 @Component({
   selector: 'app-home',
@@ -23,16 +18,21 @@ export class HomePage {
 
   message: any;
 
-    constructor(
-      public apiservice: ApiService,
-      private router: Router 
-    ){}
+  constructor(
+    public apiservice: ApiService,
+    private router: Router 
+  ){}
 
-    registrar(){
-      this.apiservice.post('usuario/registrar', this.usuario).subscribe(resp => {
-        this.message = resp;
-        alert('Usuário registrado com sucesso! Faça login para continuar.');
-        this.router.navigate(['/login']); 
-      });
-    }
-}
+  registrar() {
+    this.apiservice.post('usuario/registrar', this.usuario).subscribe((resp: any) => {
+      this.message = resp;
+      alert('Usuário registrado com sucesso!');
+  
+      // Salva o nome do usuário no localStorage
+      localStorage.setItem('user_name', this.usuario.name);
+  
+      this.router.navigate(['/posts']);
+    });
+  }
+  }
+
