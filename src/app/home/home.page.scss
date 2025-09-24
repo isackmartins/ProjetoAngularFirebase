@@ -1,0 +1,62 @@
+ion-content {
+  --background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+ion-card {
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+ion-card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+ion-item {
+  --background: transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+ion-label {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+ion-input {
+  color: #00fff7;
+}
+
+ion-button {
+  margin-top: 15px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00fff7, #8e2de2, #4a00e0);
+  background-size: 300% 300%;
+  animation: buttonGlow 6s ease infinite;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+}
+
+@keyframes buttonGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+ion-input::part(native) {
+  caret-color: #00fff7;
+}

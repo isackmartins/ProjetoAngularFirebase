@@ -1,7 +1,92 @@
+ion-content {
+  --background: #0f0f1a; /* fundo sólido e elegante */
+}
+
+/* Card do Novo Post */
+ion-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+ion-card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #00e5ff;
+}
+
+/* Inputs */
+ion-input,
+ion-textarea {
+  --background: transparent;
+  --color: #e5e5e5;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+  margin-top: 10px;
+  padding-bottom: 5px;
+  transition: border-color 0.3s;
+}
+
+ion-input:focus-within,
+ion-textarea:focus-within {
+  border-color: #00e5ff;
+}
+
+ion-label {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Botão */
+ion-button {
+  margin-top: 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: #00e5ff;
+  color: #0f0f1a;
+  transition: all 0.3s;
+}
+
+ion-button:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+}
+
+/* Lista de posts */
 ion-item {
-    margin-bottom: 10px;
-  }
-  
-  ion-input {
-    max-width: 70%;
-  }
+  --background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  margin: 10px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: 0.3s;
+}
+
+ion-item:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+/* Imagem */
+ion-thumbnail img {
+  border-radius: 8px;
+}
+
+/* Texto */
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #00e5ff;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+small {
+  font-size: 0.75rem;
+  color: #888;
+}
