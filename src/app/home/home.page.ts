@@ -4,25 +4,27 @@ import { CrudService } from '../services/crud.service';
 import { Storage, getDownloadURL, ref, uploadBytesResumable } from '@angular/fire/storage';
 import { MessageService } from '../services/message.service';
 import { Router } from '@angular/router';
+import { APIService } from '../services/api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePagen implements OnInit, ViewInit {
 
-  pokemon:any = {
-    nome: null,
-    poder: null
-  };
-
-  constructor( 
-    public crudService: CrudService
-  ){ }
-
-  enviar() {
-    this.crudService.insert(this.pokemon, 'pokemons');
+  constructor(
+    public apiService: APIService 
+  ){
+    this.carregarPaises();
   }
+
+  carregarPaises() {
+    this.apiService.get('name/brazil').subscribe((resp)=>{
+      console.log(resp);
+    })
+  }
+  
+  
 
 }
